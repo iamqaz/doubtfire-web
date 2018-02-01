@@ -1,0 +1,16 @@
+.modal-badges {
+  .badges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    justify-items: center;
+    align-items: center;
+  }
+  .badge-item > p {
+    text-align: center;
+  }
+  .badge-item > img {
+    max-width: 100px;
+  }
+}
+
+

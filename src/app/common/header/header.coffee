@@ -4,7 +4,7 @@
 angular.module('doubtfire.common.header', [
   'doubtfire.common.header.unit-dropdown'
 ])
-.controller("BasicHeaderCtrl", ($scope, $state, $rootScope, $modal, AboutDoubtfireModal, UserNotificationSettingsModal, UserSettingsModal, currentUser, $stateParams) ->
+.controller("BasicHeaderCtrl", ($scope, $state, $rootScope, $modal, AboutDoubtfireModal, UserNotificationSettingsModal, BadgesModal, UserSettingsModal, currentUser, $stateParams) ->
   $scope.currentUser = currentUser.profile
 
   $scope.tutor = $state.params?.tutor?
@@ -26,6 +26,12 @@ angular.module('doubtfire.common.header', [
   #
   $scope.openAboutModal = ->
     AboutDoubtfireModal.show()
+
+  #
+  # Opens the badges modal
+  #
+  $scope.openBadgesModal = ->
+    BadgesModal.show()
 
   #
   # Updates the context of the selected unit
